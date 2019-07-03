@@ -1,0 +1,1398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level2/version4" level="2" version="4">
+  <annotation>
+    <SimBiology xmlns="http://www.mathworks.com">
+      <Version Major="5" Minor="8" Point="2"/>
+    </SimBiology>
+  </annotation>
+  <model id="mw7088bebc_5441_43e1_aaf7_1467e9e84f91" name="untitled">
+    <listOfCompartments>
+      <compartment id="mw354d3657_235c_4bad_a397_69ea8b4f3e64" name="Lymphocyte" size="1" constant="true"/>
+      <compartment id="mw2ced8552_190f_45e2_9c0a_e9c67563e4d7" name="Nucleus" size="1" outside="mw354d3657_235c_4bad_a397_69ea8b4f3e64" constant="true"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species id="mw51a01a93_7a83_4011_a195_19cc4f4273b4" name="DNA" compartment="mw2ced8552_190f_45e2_9c0a_e9c67563e4d7" initialConcentration="1" boundaryCondition="false" constant="true"/>
+      <species id="mw40e594d3_b3ed_419a_b186_108d5cbc383f" name="mRNA-2" compartment="mw2ced8552_190f_45e2_9c0a_e9c67563e4d7" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species id="mw06cc2bee_f058_425a_8b42_8cbe1fbfd186" name="(E-cER)2" compartment="mw2ced8552_190f_45e2_9c0a_e9c67563e4d7" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species id="mw6bf46725_d7de_4f97_ab73_10f814f798a2" name="mRNA-3" compartment="mw2ced8552_190f_45e2_9c0a_e9c67563e4d7" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species id="mwac6e6c3c_fb56_41c0_ae8d_96563cad8565" name="mRNA-1" compartment="mw2ced8552_190f_45e2_9c0a_e9c67563e4d7" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species id="mwb76b39be_505a_40fb_8378_3fa8ba769b5d" name="mRNA-4" compartment="mw2ced8552_190f_45e2_9c0a_e9c67563e4d7" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species id="mw33c76b13_87ce_4270_8b77_b947d894d330" name="mRNA-5" compartment="mw2ced8552_190f_45e2_9c0a_e9c67563e4d7" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species id="mw2388c071_671a_448f_880d_3be359766ae7" name="mRNA-6" compartment="mw2ced8552_190f_45e2_9c0a_e9c67563e4d7" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species id="mwc214d735_e319_4780_9d9e_3774737ef55b" name="mRNA-7" compartment="mw2ced8552_190f_45e2_9c0a_e9c67563e4d7" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species id="mw00bb522a_b97b_4b2e_9789_d71d53392019" name="CHOP" compartment="mw2ced8552_190f_45e2_9c0a_e9c67563e4d7" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species id="mw46dc1499_c533_490d_b696_04678b331e0c" name="a1-AR" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="0.1753" boundaryCondition="false" constant="false"/>
+      <species id="mw1bbcc73e_a532_4cfd_beda_a38686258696" name="phenylephrine" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="1000" boundaryCondition="false" constant="false"/>
+      <species id="mwee3e5f3d_465d_489f_993c_1d49b6a7c6fa" name="a1AR-Phe*" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species id="mw496482a7_403e_4991_b25e_ed08acdaeb07" name="a2-AR" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="0.0199" boundaryCondition="false" constant="false"/>
+      <species id="mwaf68c2d6_b9ef_422e_9856_156add59fd20" name="clonidine" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="1000" boundaryCondition="false" constant="false"/>
+      <species id="mwc62ef036_974e_4bd0_86e4_4d512776ab13" name="a2AR-Clo" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species id="mw3ac99fbe_050b_4c20_a6e3_c9268a76f0ff" name="p-ERK" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species id="mw30d58f3d_0755_4e63_bd61_998b7260f86c" name="ERK" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="251" boundaryCondition="false" constant="false"/>
+      <species id="mwa5312bfa_0386_4215_9a63_e1dce6fa6a80" name="CREB" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="245.6" boundaryCondition="false" constant="false"/>
+      <species id="mwcfa3624f_3027_4fd0_8317_e2ce51def5dd" name="p-CREB" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species id="mw048e3b9b_30d3_4b76_b9a2_3f7af9ae1659" name="IFN-g" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="560" boundaryCondition="false" constant="false"/>
+      <species id="mwc1051085_f5b8_44d4_ab09_36ced9b4722c" name="IFNGR" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="0.0002265" boundaryCondition="false" constant="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">Units:receptor/cell</body>
+        </notes>
+      </species>
+      <species id="mw5f0a5266_4745_46d5_ba78_3559ac50edbf" name="IFNg-IFNGR" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species id="mw5ffc4183_b6b2_4dec_8b29_cd72145d7610" name="(IFNg-IFNGR)2" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species id="mw586f3bd2_ca4d_480d_8c9c_808311a66350" name="(IFNg-IFNGR*)2" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species id="mw4cc7fb99_a359_4992_a8e3_1731b254b4e9" name="MEK" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="257" boundaryCondition="false" constant="false"/>
+      <species id="mwdab6a95d_c21f_477d_8be9_82a50374c96b" name="MEK-raf*" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species id="mwe5a1226f_77cf_4c41_8f37_208fce1872c1" name="MEK-P" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species id="mw2e6ed15f_063f_498d_8039_0504ba89ed3c" name="pMEK-raf*2" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species id="mw47f12796_2922_469c_8a83_4d532f300ff9" name="MEK-pp" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species id="mw6c3bb381_e822_4dda_9259_c2ee10c49d1d" name="cbp" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="257" boundaryCondition="false" constant="false"/>
+      <species id="mwf0a6b3b1_dcd3_483e_902d_18d176312401" name="Estrogen" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="1000" boundaryCondition="false" constant="false"/>
+      <species id="mwd16a11b8_f083_465c_af9f_938e1384e0bc" name="GPCR" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="1" boundaryCondition="false" constant="true"/>
+      <species id="mwccbfa5ee_0840_414b_b3e3_6b06345efa78" name="PKA" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="257" boundaryCondition="false" constant="false"/>
+      <species id="mwae72b0d6_9088_45b3_935b_3ebfe335ba30" name="PKA*" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species id="mwd36f08fe_f9c6_44eb_8a03_9473d560b385" name="ER" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="6.204e-07" boundaryCondition="false" constant="false"/>
+      <species id="mw4715dce4_9477_4903_86d1_5d306fed7d8b" name="E-ER" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species id="mw260d52d7_8fd2_4836_82db_9187d94bbed2" name="shc-grb2-sos" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="250" boundaryCondition="false" constant="false"/>
+      <species id="mw29b6562d_d989_41b8_8ffc_e1df7437d1d4" name="EER-shcgrb2sos" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species id="mwcb9af615_250c_4526_a20a_b99e8622f94a" name="pi3k" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="257" boundaryCondition="false" constant="false"/>
+      <species id="mw9539004a_e3cd_4992_8259_13bd7a5c7dc9" name="pi3k*" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species id="mwaf2b3789_4368_4368_a5ab_7692f4e76d5a" name="Akt" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="219" boundaryCondition="false" constant="false"/>
+      <species id="mw056d07d0_1160_41b1_95e7_fdd22f8dd76e" name="NO" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="10" boundaryCondition="false" constant="false"/>
+      <species id="mw5cca062b_57e5_4bbd_ab06_ff8ec2997bd9" name="BCL2" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="300" boundaryCondition="false" constant="false"/>
+      <species id="mw233020b9_cfb3_4afa_ba9e_358e4b681a14" name="BCL2*" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species id="mw95c3f5f5_f90a_477f_9a72_ad59ce58cea8" name="survival signal" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species id="mw6a51da6a_788b_4ddd_bb7e_9cf767307605" name="cER" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="1.36e-07" boundaryCondition="false" constant="true"/>
+      <species id="mwcd8b139e_a7c3_4c49_b61c_c7e6a6bdf9dd" name="E-cER" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species id="mw0744fb72_f594_4775_8530_3bc246adc621" name="b2-AR" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="0.000391" boundaryCondition="false" constant="true"/>
+      <species id="mw9963d916_d051_458c_9649_99a1ce0846bf" name="terbutaline" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="1000" boundaryCondition="false" constant="false"/>
+      <species id="mw6aca3e15_fc11_4e0b_bbae_c113f6497443" name="b2AR-Ter" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species id="mw7b8be0c0_6c0c_41e5_9425_5bca35f3d34d" name="IL-2" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="750" boundaryCondition="false" constant="false"/>
+      <species id="mw59b02fde_5a49_4f71_8d2d_8059ad43e85c" name="ras*" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species id="mwe48777dd_79f0_4f05_8ed5_6bd1ad0adb41" name="ras" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="250" boundaryCondition="false" constant="false"/>
+      <species id="mw04d8e08d_e7bc_44aa_94b6_2b5e40fa22cc" name="raf" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="112.5585" boundaryCondition="false" constant="false"/>
+      <species id="mw425e8d8b_d552_4a9c_811a_565babc548cf" name="raf*" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species id="mw06278487_c493_4d97_b30e_8b73aa99194a" name="CAAT" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species id="mwb57bb21f_8327_4628_b2e0_8337bc371707" name="BAX" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="200" boundaryCondition="false" constant="false"/>
+      <species id="mwd25dfa99_1502_4773_a683_ef578555b596" name="BCL2-BAX dimer" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species id="mw347adca1_4ec2_46d2_98d2_da6b08c0ce2a" name="apoptosis" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species id="mw0a154ef8_bb20_4646_a721_3d0622fa9af3" name="iNOS" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="0" boundaryCondition="false" constant="true"/>
+      <species id="mw2ae546bf_9566_4b73_b7e1_4a4d7216e0e8" name="L Arg" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="200" boundaryCondition="false" constant="true"/>
+      <species id="mwd3e2c231_dec0_43b9_a836_c95f9e470140" name="CAT" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="10" boundaryCondition="false" constant="false"/>
+      <species id="mwe7177d4b_4638_4776_8768_2fc701639ea4" name="superoxides" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="80" boundaryCondition="false" constant="false"/>
+      <species id="mw923ea8e2_e408_4fdd_8a4a_a6c4b95fd60c" name="SOD" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species id="mw71275f0c_2fb6_4a33_b228_d0099722c528" name="Peroxynitrite" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="80" boundaryCondition="false" constant="false"/>
+      <species id="mwb31dde46_9ce1_44e3_802f_7bf2020ef5a9" name="cAMP" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species id="mw559218d8_b18b_4924_9a87_6024b839fe9a" name="p-Akt" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species id="mwba315c92_1e4c_41ff_bf94_9472d2d3a724" name="C/EBP" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species id="mw68f558c1_affd_4e07_9d1f_138190751cb7" name="CHOP" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species id="mw882c6487_b90e_43a1_b555_48a0f6e76cd9" name="cbp-creb" compartment="mw354d3657_235c_4bad_a397_69ea8b4f3e64" initialConcentration="0" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfReactions>
+      <reaction id="mw554df088_affe_448b_bc74_d1d542ed7365" name="agonist  binding" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw46dc1499_c533_490d_b696_04678b331e0c" stoichiometry="1"/>
+          <speciesReference species="mw1bbcc73e_a532_4cfd_beda_a38686258696" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mwee3e5f3d_465d_489f_993c_1d49b6a7c6fa" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> mw3dc5ab2e_c691_4fca_bb7a_b4d8c2de0cff </ci>
+                <ci> mw1bbcc73e_a532_4cfd_beda_a38686258696 </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <ci> mw14a500ae_9068_43d0_8d4f_a1283cb97359 </ci>
+                <ci> mw1bbcc73e_a532_4cfd_beda_a38686258696 </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mw3dc5ab2e_c691_4fca_bb7a_b4d8c2de0cff" name="vm" value="0.0001753" constant="true"/>
+            <parameter id="mw14a500ae_9068_43d0_8d4f_a1283cb97359" name="km" value="0.65" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw9c517b0a_8b08_4567_bec3_16da4e6c68a1" name="a2 Agonist binding" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw496482a7_403e_4991_b25e_ed08acdaeb07" stoichiometry="1"/>
+          <speciesReference species="mwaf68c2d6_b9ef_422e_9856_156add59fd20" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mwc62ef036_974e_4bd0_86e4_4d512776ab13" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> mwc10b036c_5139_4b44_aff9_fb70aed03fe2 </ci>
+                <ci> mwaf68c2d6_b9ef_422e_9856_156add59fd20 </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <ci> mw114431bb_b91d_437f_95ce_914a8a68b62f </ci>
+                <ci> mwaf68c2d6_b9ef_422e_9856_156add59fd20 </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mwc10b036c_5139_4b44_aff9_fb70aed03fe2" name="va" value="1.99e-05" constant="true"/>
+            <parameter id="mw114431bb_b91d_437f_95ce_914a8a68b62f" name="kn" value="3.7" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw52f0bf52_1b36_471f_a589_456ecc969fde" name="ERK phosphorylation" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw30d58f3d_0755_4e63_bd61_998b7260f86c" stoichiometry="1"/>
+          <speciesReference species="mw47f12796_2922_469c_8a83_4d532f300ff9" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw3ac99fbe_050b_4c20_a6e3_c9268a76f0ff" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mwee827b69_f09f_4b01_862e_cb8c19c48b7f </ci>
+              <ci> mw30d58f3d_0755_4e63_bd61_998b7260f86c </ci>
+              <ci> mw47f12796_2922_469c_8a83_4d532f300ff9 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mwee827b69_f09f_4b01_862e_cb8c19c48b7f" name="ka2" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw6db2e6c5_2a6b_4650_915a_80b9e4513463" name="CREB Phosphorylation" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw3ac99fbe_050b_4c20_a6e3_c9268a76f0ff" stoichiometry="1"/>
+          <speciesReference species="mwa5312bfa_0386_4215_9a63_e1dce6fa6a80" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mwcfa3624f_3027_4fd0_8317_e2ce51def5dd" stoichiometry="1"/>
+          <speciesReference species="mw30d58f3d_0755_4e63_bd61_998b7260f86c" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mwe68bfa2a_3fef_4dcc_b8bb_07eb0dc9bc79 </ci>
+              <ci> mw3ac99fbe_050b_4c20_a6e3_c9268a76f0ff </ci>
+              <ci> mwa5312bfa_0386_4215_9a63_e1dce6fa6a80 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mwe68bfa2a_3fef_4dcc_b8bb_07eb0dc9bc79" name="pe" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw7aafbf0d_1e50_455e_b3a3_c4cb106cb2bb" name="IFNg binding" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mwc1051085_f5b8_44d4_ab09_36ced9b4722c" stoichiometry="1"/>
+          <speciesReference species="mw048e3b9b_30d3_4b76_b9a2_3f7af9ae1659" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw5f0a5266_4745_46d5_ba78_3559ac50edbf" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> mw4bb93744_625e_44c2_914a_88c9791629b0 </ci>
+                <ci> mwa5312bfa_0386_4215_9a63_e1dce6fa6a80 </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <ci> mwb574aabc_d3b6_48e7_b3f7_9c0bbe57abbc </ci>
+                <ci> mwa5312bfa_0386_4215_9a63_e1dce6fa6a80 </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mw4bb93744_625e_44c2_914a_88c9791629b0" name="vm" value="0.00022654" constant="true"/>
+            <parameter id="mwb574aabc_d3b6_48e7_b3f7_9c0bbe57abbc" name="kd" value="0.9" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwc8358560_24ac_4862_854b_2936e431319d" name="IFNGR dimerisation" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw5f0a5266_4745_46d5_ba78_3559ac50edbf" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw5ffc4183_b6b2_4dec_8b29_cd72145d7610" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mw5a7fe20e_49de_436e_acf3_a2a399215688 </ci>
+              <ci> mw5f0a5266_4745_46d5_ba78_3559ac50edbf </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mw5a7fe20e_49de_436e_acf3_a2a399215688" name="rd" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwe286b5c3_891c_4f69_87c7_d6edb3c365db" name="IFNGR activation" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw5ffc4183_b6b2_4dec_8b29_cd72145d7610" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw586f3bd2_ca4d_480d_8c9c_808311a66350" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mwee6c88f6_fb31_4a10_8470_cf0f36c61d7c </ci>
+              <ci> mw5ffc4183_b6b2_4dec_8b29_cd72145d7610 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mwee6c88f6_fb31_4a10_8470_cf0f36c61d7c" name="rc" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwce87ea73_8b67_4e44_9bb7_b894dee2c4c0" name="MEK-Binding" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw4cc7fb99_a359_4992_a8e3_1731b254b4e9" stoichiometry="1"/>
+          <speciesReference species="mw425e8d8b_d552_4a9c_811a_565babc548cf" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mwdab6a95d_c21f_477d_8be9_82a50374c96b" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mwd7b56207_42ab_48da_ba42_ec53e2c5d3fd </ci>
+              <ci> mw4cc7fb99_a359_4992_a8e3_1731b254b4e9 </ci>
+              <ci> mw425e8d8b_d552_4a9c_811a_565babc548cf </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mwd7b56207_42ab_48da_ba42_ec53e2c5d3fd" name="mek" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwfca3aa9d_ab46_40d7_812f_cbaf92e1381d" name="phosphorylation" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mwdab6a95d_c21f_477d_8be9_82a50374c96b" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mwe5a1226f_77cf_4c41_8f37_208fce1872c1" stoichiometry="1"/>
+          <speciesReference species="mw04d8e08d_e7bc_44aa_94b6_2b5e40fa22cc" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mw6a169cd5_f242_436c_bac0_05b1db6f483a </ci>
+              <ci> mwdab6a95d_c21f_477d_8be9_82a50374c96b </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mw6a169cd5_f242_436c_bac0_05b1db6f483a" name="mekp" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw42ea7765_ae63_4bd6_a244_84cae62b31e5" name="RAF-MEK complex" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mwe5a1226f_77cf_4c41_8f37_208fce1872c1" stoichiometry="1"/>
+          <speciesReference species="mw425e8d8b_d552_4a9c_811a_565babc548cf" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw2e6ed15f_063f_498d_8039_0504ba89ed3c" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mwf27e7fd4_c568_42a5_8c84_95d6d32ffcb6 </ci>
+              <ci> mwe5a1226f_77cf_4c41_8f37_208fce1872c1 </ci>
+              <ci> mw425e8d8b_d552_4a9c_811a_565babc548cf </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mwf27e7fd4_c568_42a5_8c84_95d6d32ffcb6" name="rm" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw98b0bd46_0d66_440f_900c_d5f82d7ce22c" name="phosporylation" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw2e6ed15f_063f_498d_8039_0504ba89ed3c" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw47f12796_2922_469c_8a83_4d532f300ff9" stoichiometry="1"/>
+          <speciesReference species="mw04d8e08d_e7bc_44aa_94b6_2b5e40fa22cc" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mw1e33f7ce_7019_4125_a861_016a45d6fddc </ci>
+              <ci> mw2e6ed15f_063f_498d_8039_0504ba89ed3c </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mw1e33f7ce_7019_4125_a861_016a45d6fddc" name="mpp" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw0ffdd93a_5e13_42e7_952b_6a9ac5b6ac72" name="CREB-translocation" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mwcfa3624f_3027_4fd0_8317_e2ce51def5dd" stoichiometry="1"/>
+          <speciesReference species="mw6c3bb381_e822_4dda_9259_c2ee10c49d1d" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw882c6487_b90e_43a1_b555_48a0f6e76cd9" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mw0d547814_e6eb_4de9_b42d_d5c1ea20e607 </ci>
+              <ci> mwcfa3624f_3027_4fd0_8317_e2ce51def5dd </ci>
+              <ci> mw6c3bb381_e822_4dda_9259_c2ee10c49d1d </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mw0d547814_e6eb_4de9_b42d_d5c1ea20e607" name="ct" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw85acf1f4_1e93_4212_bc24_05f930780037" name="transcription 2" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw51a01a93_7a83_4011_a195_19cc4f4273b4" stoichiometry="1"/>
+          <speciesReference species="mw882c6487_b90e_43a1_b555_48a0f6e76cd9" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw40e594d3_b3ed_419a_b186_108d5cbc383f" stoichiometry="1"/>
+          <speciesReference species="mw6bf46725_d7de_4f97_ab73_10f814f798a2" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mw1092ad99_2f0f_497e_bc39_abeb9363e80b </ci>
+              <ci> mw51a01a93_7a83_4011_a195_19cc4f4273b4 </ci>
+              <ci> mw882c6487_b90e_43a1_b555_48a0f6e76cd9 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mw1092ad99_2f0f_497e_bc39_abeb9363e80b" name="tr" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw1f06e5eb_e4be_4025_906e_0f1e9f36ad14" name="E-GPCR activation" reversible="false" fast="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <annotation>P. Thomas, Y. Pang, E. J. Filardo and J. Dong. Identity of an Estrogen Membrane Receptor Coupled to a G Protein in Human Breast Cancer Cells. Endocrinology 146 (2): 624; Yefei Pang, Jing Dong, and Peter Thomas. Estrogen Signaling Characteristics of Atlantic Croaker G Protein-Coupled Receptor 30 (GPR30) and Evidence It Is Involved in Maintenance of Oocyte Meiotic Arrest. Endocrinology. 2008 July; 149(7): 3410–3426.         </annotation>
+          </body>
+        </notes>
+        <listOfReactants>
+          <speciesReference species="mwf0a6b3b1_dcd3_483e_902d_18d176312401" stoichiometry="1"/>
+          <speciesReference species="mwd16a11b8_f083_465c_af9f_938e1384e0bc" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mwb31dde46_9ce1_44e3_802f_7bf2020ef5a9" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> mwa3cb5210_3604_4f20_8d30_7c1a5bccdef8 </ci>
+                <ci> mwf0a6b3b1_dcd3_483e_902d_18d176312401 </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <ci> mw4af3ee64_6e9f_49ee_b400_dc58a09fe1e7 </ci>
+                <ci> mwf0a6b3b1_dcd3_483e_902d_18d176312401 </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mwa3cb5210_3604_4f20_8d30_7c1a5bccdef8" name="Vm2" value="0.114" constant="true"/>
+            <parameter id="mw4af3ee64_6e9f_49ee_b400_dc58a09fe1e7" name="Km1" value="2.7" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw49980bda_0f25_4d93_a013_dc15182eb7df" name="PKA activation" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mwccbfa5ee_0840_414b_b3e3_6b06345efa78" stoichiometry="1"/>
+          <speciesReference species="mwb31dde46_9ce1_44e3_802f_7bf2020ef5a9" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mwae72b0d6_9088_45b3_935b_3ebfe335ba30" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mwb5b0bc4f_22a3_41d7_ac8e_93395f8d2f80 </ci>
+              <ci> mwccbfa5ee_0840_414b_b3e3_6b06345efa78 </ci>
+              <ci> mwb31dde46_9ce1_44e3_802f_7bf2020ef5a9 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mwb5b0bc4f_22a3_41d7_ac8e_93395f8d2f80" name="pk" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw1297ecc4_7e27_43a8_a6df_d218b95a2f67" name="ER binding" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mwd36f08fe_f9c6_44eb_8a03_9473d560b385" stoichiometry="1"/>
+          <speciesReference species="mwf0a6b3b1_dcd3_483e_902d_18d176312401" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw4715dce4_9477_4903_86d1_5d306fed7d8b" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mw80c93069_b83d_4d2b_a1e0_e669b0c7144a </ci>
+              <ci> mwd36f08fe_f9c6_44eb_8a03_9473d560b385 </ci>
+              <ci> mwf0a6b3b1_dcd3_483e_902d_18d176312401 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mw80c93069_b83d_4d2b_a1e0_e669b0c7144a" name="erb" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwaa3bf41c_f89c_4d6b_8804_95bfc2b86eba" name="ER-Ras activation" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw4715dce4_9477_4903_86d1_5d306fed7d8b" stoichiometry="1"/>
+          <speciesReference species="mw260d52d7_8fd2_4836_82db_9187d94bbed2" stoichiometry="1"/>
+          <speciesReference species="mwe48777dd_79f0_4f05_8ed5_6bd1ad0adb41" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw59b02fde_5a49_4f71_8d2d_8059ad43e85c" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mwaf2e93e2_a0c5_4b16_b984_0dd8b049d58a </ci>
+              <ci> mw4715dce4_9477_4903_86d1_5d306fed7d8b </ci>
+              <ci> mw260d52d7_8fd2_4836_82db_9187d94bbed2 </ci>
+              <ci> mwe48777dd_79f0_4f05_8ed5_6bd1ad0adb41 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mwaf2e93e2_a0c5_4b16_b984_0dd8b049d58a" name="era" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwa0b8ff76_c7e0_48e1_9275_81af8bc03099" name="grb2-sos signaling" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw4715dce4_9477_4903_86d1_5d306fed7d8b" stoichiometry="1"/>
+          <speciesReference species="mw260d52d7_8fd2_4836_82db_9187d94bbed2" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw29b6562d_d989_41b8_8ffc_e1df7437d1d4" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mw7d583173_74ea_4641_bc3c_bef3d3be27fa </ci>
+              <ci> mw4715dce4_9477_4903_86d1_5d306fed7d8b </ci>
+              <ci> mw260d52d7_8fd2_4836_82db_9187d94bbed2 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mw7d583173_74ea_4641_bc3c_bef3d3be27fa" name="eg" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw9a5401cc_ef86_445c_8f92_d822f8114e5d" name="ER-Pi3k activation" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw29b6562d_d989_41b8_8ffc_e1df7437d1d4" stoichiometry="1"/>
+          <speciesReference species="mwcb9af615_250c_4526_a20a_b99e8622f94a" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw9539004a_e3cd_4992_8259_13bd7a5c7dc9" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mw48159d29_79df_44a3_800b_84fc75f32d32 </ci>
+              <ci> mw29b6562d_d989_41b8_8ffc_e1df7437d1d4 </ci>
+              <ci> mwcb9af615_250c_4526_a20a_b99e8622f94a </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mw48159d29_79df_44a3_800b_84fc75f32d32" name="ep" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw8056dc77_a9b2_49f8_b315_8a27ec1336d6" name="AKT activation" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw9539004a_e3cd_4992_8259_13bd7a5c7dc9" stoichiometry="1"/>
+          <speciesReference species="mwaf2b3789_4368_4368_a5ab_7692f4e76d5a" stoichiometry="1"/>
+          <speciesReference species="mwc62ef036_974e_4bd0_86e4_4d512776ab13" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw559218d8_b18b_4924_9a87_6024b839fe9a" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mw26be2e2d_4f36_439d_b02e_10e64d3f14e1 </ci>
+              <ci> mw9539004a_e3cd_4992_8259_13bd7a5c7dc9 </ci>
+              <ci> mwaf2b3789_4368_4368_a5ab_7692f4e76d5a </ci>
+              <ci> mwc62ef036_974e_4bd0_86e4_4d512776ab13 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mw26be2e2d_4f36_439d_b02e_10e64d3f14e1" name="at" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwba8aa0e0_fa3c_4d08_a856_d300f12f9025" name="NOS activation" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw2ae546bf_9566_4b73_b7e1_4a4d7216e0e8" stoichiometry="1"/>
+          <speciesReference species="mw0a154ef8_bb20_4646_a721_3d0622fa9af3" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw056d07d0_1160_41b1_95e7_fdd22f8dd76e" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> mwbbd2f7b1_faf7_4773_a721_bc9e89f0dc2f </ci>
+                <ci> mw2ae546bf_9566_4b73_b7e1_4a4d7216e0e8 </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <ci> mwe953a24c_d226_4bfe_992f_f05b0e4bd760 </ci>
+                <ci> mw2ae546bf_9566_4b73_b7e1_4a4d7216e0e8 </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mwe953a24c_d226_4bfe_992f_f05b0e4bd760" name="fd" value="32.3" constant="true"/>
+            <parameter id="mwbbd2f7b1_faf7_4773_a721_bc9e89f0dc2f" name="hg" value="1052" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwd82423ca_aed9_44ac_a642_69cd60f5beaa" name="bcl2 activation" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw5cca062b_57e5_4bbd_ab06_ff8ec2997bd9" stoichiometry="1"/>
+          <speciesReference species="mw559218d8_b18b_4924_9a87_6024b839fe9a" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw233020b9_cfb3_4afa_ba9e_358e4b681a14" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mw0912ba33_abf6_496f_b8e3_8fd8cff8f9fa </ci>
+              <ci> mw5cca062b_57e5_4bbd_ab06_ff8ec2997bd9 </ci>
+              <ci> mw559218d8_b18b_4924_9a87_6024b839fe9a </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mw0912ba33_abf6_496f_b8e3_8fd8cff8f9fa" name="bc" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw2f05fe5a_55ca_40c6_89da_41b989977131" name="anti-apoptotic signal 2" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw40e594d3_b3ed_419a_b186_108d5cbc383f" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw95c3f5f5_f90a_477f_9a72_ad59ce58cea8" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mw7ecfb056_bb98_4af2_a32e_f5f67f05ac19 </ci>
+              <ci> mw40e594d3_b3ed_419a_b186_108d5cbc383f </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mw7ecfb056_bb98_4af2_a32e_f5f67f05ac19" name="as" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwc33f9e91_41ea_4eda_ac53_c71eee38a774" name="anti-apopototic signal 1" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw233020b9_cfb3_4afa_ba9e_358e4b681a14" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw95c3f5f5_f90a_477f_9a72_ad59ce58cea8" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mwd0352e37_2ab7_4f91_b7f4_05742dfda086 </ci>
+              <ci> mw233020b9_cfb3_4afa_ba9e_358e4b681a14 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mwd0352e37_2ab7_4f91_b7f4_05742dfda086" name="aps" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw46f58864_0242_498e_9820_1c94a1a5a3b4" name="cER binding" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mwf0a6b3b1_dcd3_483e_902d_18d176312401" stoichiometry="1"/>
+          <speciesReference species="mw6a51da6a_788b_4ddd_bb7e_9cf767307605" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mwcd8b139e_a7c3_4c49_b61c_c7e6a6bdf9dd" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mw51289516_4c91_43f2_a468_3f2f21832a4e </ci>
+              <ci> mwf0a6b3b1_dcd3_483e_902d_18d176312401 </ci>
+              <ci> mw6a51da6a_788b_4ddd_bb7e_9cf767307605 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mw51289516_4c91_43f2_a468_3f2f21832a4e" name="ecr" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwf58ddf23_6f9b_472f_bdc7_80a49e0d59b6" name="ER-Dimerization" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mwcd8b139e_a7c3_4c49_b61c_c7e6a6bdf9dd" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw06cc2bee_f058_425a_8b42_8cbe1fbfd186" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mwbcb4eea0_4d73_4725_a587_3cff92a36a19 </ci>
+              <ci> mwcd8b139e_a7c3_4c49_b61c_c7e6a6bdf9dd </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mwbcb4eea0_4d73_4725_a587_3cff92a36a19" name="ed" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw9930c0c3_8dc4_4436_a84a_b33eb40169ea" name="transcription 3" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw06cc2bee_f058_425a_8b42_8cbe1fbfd186" stoichiometry="1"/>
+          <speciesReference species="mw51a01a93_7a83_4011_a195_19cc4f4273b4" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw6bf46725_d7de_4f97_ab73_10f814f798a2" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mw8b36f3a4_fef5_48b8_9e36_e9bf685d2982 </ci>
+              <ci> mw06cc2bee_f058_425a_8b42_8cbe1fbfd186 </ci>
+              <ci> mw51a01a93_7a83_4011_a195_19cc4f4273b4 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mw8b36f3a4_fef5_48b8_9e36_e9bf685d2982" name="nt" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw39afb13f_7eee_4d9e_9467_e038d75d2c98" name="IFNG production" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw6bf46725_d7de_4f97_ab73_10f814f798a2" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw048e3b9b_30d3_4b76_b9a2_3f7af9ae1659" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mw5f6781b7_f3de_4c7c_8ce4_20edd4114465 </ci>
+              <ci> mw6bf46725_d7de_4f97_ab73_10f814f798a2 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mw5f6781b7_f3de_4c7c_8ce4_20edd4114465" name="ifp" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw65aff939_cc06_4a29_905f_59313eeb18b5" name="AR beta activation" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw0744fb72_f594_4775_8530_3bc246adc621" stoichiometry="1"/>
+          <speciesReference species="mw9963d916_d051_458c_9649_99a1ce0846bf" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw6aca3e15_fc11_4e0b_bbae_c113f6497443" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> mw1fce00fb_a023_4929_9697_12cbc6959b31 </ci>
+                <ci> mw9963d916_d051_458c_9649_99a1ce0846bf </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <ci> mwec22e975_f806_44b7_b11a_f6204d402eb6 </ci>
+                <ci> mw9963d916_d051_458c_9649_99a1ce0846bf </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mw1fce00fb_a023_4929_9697_12cbc6959b31" name="bt" value="0.000391" constant="true"/>
+            <parameter id="mwec22e975_f806_44b7_b11a_f6204d402eb6" name="kbt" value="19.9" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw0bdb64f6_e81e_430f_8226_ab568e4d5741" name="transcription 1" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw51a01a93_7a83_4011_a195_19cc4f4273b4" stoichiometry="1"/>
+          <speciesReference species="mw559218d8_b18b_4924_9a87_6024b839fe9a" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mwac6e6c3c_fb56_41c0_ae8d_96563cad8565" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mwd4d3b70d_c0cc_4e4a_9c09_b53c760fddd1 </ci>
+              <ci> mw51a01a93_7a83_4011_a195_19cc4f4273b4 </ci>
+              <ci> mw559218d8_b18b_4924_9a87_6024b839fe9a </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mwd4d3b70d_c0cc_4e4a_9c09_b53c760fddd1" name="kj" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwec008aa7_db7c_4052_9b23_ff7c35c5dfaf" name="translation" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mwac6e6c3c_fb56_41c0_ae8d_96563cad8565" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw7b8be0c0_6c0c_41e5_9425_5bca35f3d34d" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mwef9a74d0_af57_4e05_a422_be9fcb883611 </ci>
+              <ci> mwac6e6c3c_fb56_41c0_ae8d_96563cad8565 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mwef9a74d0_af57_4e05_a422_be9fcb883611" name="kl" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw0d8ee331_e3f2_4d07_8e49_6245c47d5194" name="ras activation" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw586f3bd2_ca4d_480d_8c9c_808311a66350" stoichiometry="1"/>
+          <speciesReference species="mwe48777dd_79f0_4f05_8ed5_6bd1ad0adb41" stoichiometry="1"/>
+          <speciesReference species="mw260d52d7_8fd2_4836_82db_9187d94bbed2" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw59b02fde_5a49_4f71_8d2d_8059ad43e85c" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mw6d0826ad_0a36_4ff3_aba7_c255b25ca009 </ci>
+              <ci> mw586f3bd2_ca4d_480d_8c9c_808311a66350 </ci>
+              <ci> mwe48777dd_79f0_4f05_8ed5_6bd1ad0adb41 </ci>
+              <ci> mw260d52d7_8fd2_4836_82db_9187d94bbed2 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mw6d0826ad_0a36_4ff3_aba7_c255b25ca009" name="kx" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw8b5f8c1f_2683_40be_8e97_a64d9c5f08f2" name="raf activation" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw04d8e08d_e7bc_44aa_94b6_2b5e40fa22cc" stoichiometry="1"/>
+          <speciesReference species="mw59b02fde_5a49_4f71_8d2d_8059ad43e85c" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw425e8d8b_d552_4a9c_811a_565babc548cf" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mw7b91f22a_2e79_48fd_9fd3_bd28d167f71b </ci>
+              <ci> mw04d8e08d_e7bc_44aa_94b6_2b5e40fa22cc </ci>
+              <ci> mw59b02fde_5a49_4f71_8d2d_8059ad43e85c </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mw7b91f22a_2e79_48fd_9fd3_bd28d167f71b" name="kc" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mweddaf6ef_6ccc_462c_bb65_4d1aae76f154" name="signaling" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mwa5312bfa_0386_4215_9a63_e1dce6fa6a80" stoichiometry="1"/>
+          <speciesReference species="mwee3e5f3d_465d_489f_993c_1d49b6a7c6fa" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mwcfa3624f_3027_4fd0_8317_e2ce51def5dd" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mwfe512b13_44ba_4737_85cc_029c4de7c591 </ci>
+              <ci> mwa5312bfa_0386_4215_9a63_e1dce6fa6a80 </ci>
+              <ci> mwee3e5f3d_465d_489f_993c_1d49b6a7c6fa </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mwfe512b13_44ba_4737_85cc_029c4de7c591" name="nkn" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw4fd7e69b_d9c2_4185_864e_a0596fcc3d38" name="PKA Activation" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mwc62ef036_974e_4bd0_86e4_4d512776ab13" stoichiometry="1"/>
+          <speciesReference species="mwae72b0d6_9088_45b3_935b_3ebfe335ba30" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mwccbfa5ee_0840_414b_b3e3_6b06345efa78" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mw5af4ac32_9551_495d_8f04_13aeb7649eb5 </ci>
+              <ci> mwc62ef036_974e_4bd0_86e4_4d512776ab13 </ci>
+              <ci> mwae72b0d6_9088_45b3_935b_3ebfe335ba30 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mw5af4ac32_9551_495d_8f04_13aeb7649eb5" name="ml" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwa1f909ab_7f92_4d85_a414_e9e46dd50f18" name="PKA activation2" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw6aca3e15_fc11_4e0b_bbae_c113f6497443" stoichiometry="1"/>
+          <speciesReference species="mwccbfa5ee_0840_414b_b3e3_6b06345efa78" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mwae72b0d6_9088_45b3_935b_3ebfe335ba30" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mw8a205dad_1723_474e_b50d_16cb820c04bd </ci>
+              <ci> mw6aca3e15_fc11_4e0b_bbae_c113f6497443 </ci>
+              <ci> mwccbfa5ee_0840_414b_b3e3_6b06345efa78 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mw8a205dad_1723_474e_b50d_16cb820c04bd" name="gh" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw9032ecb7_6ffa_4aa6_82a1_60b512dbad4e" name="anti-apoptotic signal 4" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw6bf46725_d7de_4f97_ab73_10f814f798a2" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw95c3f5f5_f90a_477f_9a72_ad59ce58cea8" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mw6bb1b3f6_3c57_4540_8609_9aaeea748154 </ci>
+              <ci> mw6bf46725_d7de_4f97_ab73_10f814f798a2 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mw6bb1b3f6_3c57_4540_8609_9aaeea748154" name="bnb" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw1183e342_a438_46f8_a3da_f2c4d012aa5d" name="AKT activation_1" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw6aca3e15_fc11_4e0b_bbae_c113f6497443" stoichiometry="1"/>
+          <speciesReference species="mwcb9af615_250c_4526_a20a_b99e8622f94a" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw9539004a_e3cd_4992_8259_13bd7a5c7dc9" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mw0d29b8bf_4502_4e44_bd94_d2926787b008 </ci>
+              <ci> mw6aca3e15_fc11_4e0b_bbae_c113f6497443 </ci>
+              <ci> mwcb9af615_250c_4526_a20a_b99e8622f94a </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mw0d29b8bf_4502_4e44_bd94_d2926787b008" name="jk" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw2506de51_3620_4404_9e23_8447875428d3" name="NO signaling" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw056d07d0_1160_41b1_95e7_fdd22f8dd76e" stoichiometry="1"/>
+          <speciesReference species="mw06278487_c493_4d97_b30e_8b73aa99194a" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mwba315c92_1e4c_41ff_bf94_9472d2d3a724" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mw9f0fb0dc_21e7_4870_ac7b_3072a583e5b6 </ci>
+              <ci> mw056d07d0_1160_41b1_95e7_fdd22f8dd76e </ci>
+              <ci> mw06278487_c493_4d97_b30e_8b73aa99194a </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mw9f0fb0dc_21e7_4870_ac7b_3072a583e5b6" name="vm" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwdf717a95_a0a2_46ca_b864_e8435dea1fbf" name="NO signalling" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mwba315c92_1e4c_41ff_bf94_9472d2d3a724" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw68f558c1_affd_4e07_9d1f_138190751cb7" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> mwe397b5bf_7f35_4399_a9fb_1c847a33c2f6 </ci>
+                <ci> mw06278487_c493_4d97_b30e_8b73aa99194a </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <ci> mw0e5dc051_eacb_4ad4_9f8d_129f3005c95a </ci>
+                <ci> mw06278487_c493_4d97_b30e_8b73aa99194a </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mwe397b5bf_7f35_4399_a9fb_1c847a33c2f6" name="vc" value="1" constant="true"/>
+            <parameter id="mw0e5dc051_eacb_4ad4_9f8d_129f3005c95a" name="kc" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mweb2c15e9_c6b0_4762_a1c7_071bcfd29d00" name="transcription 4" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw51a01a93_7a83_4011_a195_19cc4f4273b4" stoichiometry="1"/>
+          <speciesReference species="mw68f558c1_affd_4e07_9d1f_138190751cb7" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mwb76b39be_505a_40fb_8378_3fa8ba769b5d" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> mw1f3c55e9_c09c_4129_b0c6_10dd99253346 </ci>
+                <ci> mw00bb522a_b97b_4b2e_9789_d71d53392019 </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <ci> mw44fd359f_0310_4a1b_b9e3_16a5c1f239c7 </ci>
+                <ci> mw00bb522a_b97b_4b2e_9789_d71d53392019 </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mw1f3c55e9_c09c_4129_b0c6_10dd99253346" name="vch" value="1" constant="true"/>
+            <parameter id="mw44fd359f_0310_4a1b_b9e3_16a5c1f239c7" name="kch" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwcb94b371_7251_4a34_8f32_0cfc3cce38bb" name="BAX activation" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mwb76b39be_505a_40fb_8378_3fa8ba769b5d" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mwb57bb21f_8327_4628_b2e0_8337bc371707" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mw578519fc_cd93_4a89_953a_73c96fb69548 </ci>
+              <ci> mwb76b39be_505a_40fb_8378_3fa8ba769b5d </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mw578519fc_cd93_4a89_953a_73c96fb69548" name="fbax" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mweb1e30ae_5c3f_4b8f_9c29_1b3ce00072d3" name="dimerisation" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mwb57bb21f_8327_4628_b2e0_8337bc371707" stoichiometry="1"/>
+          <speciesReference species="mw5cca062b_57e5_4bbd_ab06_ff8ec2997bd9" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mwd25dfa99_1502_4773_a683_ef578555b596" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> mw8babdc09_b237_4edd_a8e5_b29dd89be377 </ci>
+                <ci> mwb57bb21f_8327_4628_b2e0_8337bc371707 </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <ci> mw4e6fde45_681a_43d6_9178_b5c8aaaa9cc0 </ci>
+                <ci> mwb57bb21f_8327_4628_b2e0_8337bc371707 </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mw8babdc09_b237_4edd_a8e5_b29dd89be377" name="vbax" value="1" constant="true"/>
+            <parameter id="mw4e6fde45_681a_43d6_9178_b5c8aaaa9cc0" name="kbax" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwa2b591b1_1ea0_4da9_9142_5509491d8480" name="pro-apoptotic signal" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mwd25dfa99_1502_4773_a683_ef578555b596" stoichiometry="1"/>
+          <speciesReference species="mw71275f0c_2fb6_4a33_b228_d0099722c528" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw347adca1_4ec2_46d2_98d2_da6b08c0ce2a" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <cn type="integer"> 1 </cn>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw24de6a94_9056_4c07_97c3_7f316d3df489" name="ERK-Phosphorylation" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mwae72b0d6_9088_45b3_935b_3ebfe335ba30" stoichiometry="1"/>
+          <speciesReference species="mw30d58f3d_0755_4e63_bd61_998b7260f86c" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw3ac99fbe_050b_4c20_a6e3_c9268a76f0ff" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mw9ac59f0c_4e5c_4f21_bd16_85ddbcbebef3 </ci>
+              <ci> mwae72b0d6_9088_45b3_935b_3ebfe335ba30 </ci>
+              <ci> mw30d58f3d_0755_4e63_bd61_998b7260f86c </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mw9ac59f0c_4e5c_4f21_bd16_85ddbcbebef3" name="fd" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw3d4d34db_6e8c_463a_92f7_c1d5f7fb0f6c" name="transcription 5" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw51a01a93_7a83_4011_a195_19cc4f4273b4" stoichiometry="1"/>
+          <speciesReference species="mw559218d8_b18b_4924_9a87_6024b839fe9a" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw33c76b13_87ce_4270_8b77_b947d894d330" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mwe2cc49a4_bbcf_44be_8607_7070bc62be6d </ci>
+              <ci> mw51a01a93_7a83_4011_a195_19cc4f4273b4 </ci>
+              <ci> mw559218d8_b18b_4924_9a87_6024b839fe9a </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mwe2cc49a4_bbcf_44be_8607_7070bc62be6d" name="kj" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwdae2a930_b24b_4c5c_bb2a_48c1f6ecf1d9" name="iNOS transcripn" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw33c76b13_87ce_4270_8b77_b947d894d330" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw0a154ef8_bb20_4646_a721_3d0622fa9af3" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mwd194bd85_9e1c_454e_a70d_2040125baa7b </ci>
+              <ci> mw33c76b13_87ce_4270_8b77_b947d894d330 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mwd194bd85_9e1c_454e_a70d_2040125baa7b" name="hg" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw92486818_4235_41f1_94bc_7efbd25da3d3" name="anti-apopototic signal 3" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw7b8be0c0_6c0c_41e5_9425_5bca35f3d34d" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw95c3f5f5_f90a_477f_9a72_ad59ce58cea8" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mw656dc517_91f0_4a4a_ae72_709fc2c7eaa5 </ci>
+              <ci> mw7b8be0c0_6c0c_41e5_9425_5bca35f3d34d </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mw656dc517_91f0_4a4a_ae72_709fc2c7eaa5" name="kj" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw25e198d6_628e_4a67_b4a9_1198e4dfbac8" name="transcription 6" reversible="false" fast="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <annotation>P. Thomas, Y. Pang, E. J. Filardo and J. Dong. Identity of an Estrogen Membrane Receptor Coupled to a G Protein in Human Breast Cancer Cells. Endocrinology 146 (2): 624; Yefei Pang, Jing Dong, and Peter Thomas. Estrogen Signaling Characteristics of Atlantic Croaker G Protein-Coupled Receptor 30 (GPR30) and Evidence It Is Involved in Maintenance of Oocyte Meiotic Arrest. Endocrinology. 2008 July; 149(7): 3410–3426.         </annotation>
+          </body>
+        </notes>
+        <listOfReactants>
+          <speciesReference species="mw3ac99fbe_050b_4c20_a6e3_c9268a76f0ff" stoichiometry="1"/>
+          <speciesReference species="mw51a01a93_7a83_4011_a195_19cc4f4273b4" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw2388c071_671a_448f_880d_3be359766ae7" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mwaafbd198_8450_4165_bfa7_ff92514d8892 </ci>
+              <ci> mw3ac99fbe_050b_4c20_a6e3_c9268a76f0ff </ci>
+              <ci> mw51a01a93_7a83_4011_a195_19cc4f4273b4 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mwaafbd198_8450_4165_bfa7_ff92514d8892" name="f1" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw1b9864f8_ceed_471b_9007_888e9d5ca77e" name="CAT activity" reversible="false" fast="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+(The FASEB Journal. 2006;20:A133)
+© 2006 FASEB
+114.2
+24,25(OH)2D3 binds catalase
+Ilka Nemere , Dennis Larsson , Deryk Anderson and Nathan Smith
+
+Nutrition and Food Sciences, Utah State University, 8700 Old Main Hill, Logan, UT, 84322-8700 <annotation>P. Thomas, Y. Pang, E. J. Filardo and J. Dong. Identity of an Estrogen Membrane Receptor Coupled to a G Protein in Human Breast Cancer Cells. Endocrinology 146 (2): 624; Yefei Pang, Jing Dong, and Peter Thomas. Estrogen Signaling Characteristics of Atlantic Croaker G Protein-Coupled Receptor 30 (GPR30) and Evidence It Is Involved in Maintenance of Oocyte Meiotic Arrest. Endocrinology. 2008 July; 149(7): 3410–3426.         </annotation>
+      </body>
+    </notes>
+    <listOfReactants>
+      <speciesReference species="mwe7177d4b_4638_4776_8768_2fc701639ea4" stoichiometry="1"/>
+      <speciesReference species="mwd3e2c231_dec0_43b9_a836_c95f9e470140" stoichiometry="1"/>
+    </listOfReactants>
+    <listOfProducts>
+      <speciesReference species="mw95c3f5f5_f90a_477f_9a72_ad59ce58cea8" stoichiometry="1"/>
+    </listOfProducts>
+    <kineticLaw>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <apply>
+          <divide/>
+          <apply>
+            <times/>
+            <ci> mw0a49291e_6d2f_4d45_9149_91fd1584d740 </ci>
+            <ci> mwe7177d4b_4638_4776_8768_2fc701639ea4 </ci>
+          </apply>
+          <apply>
+            <plus/>
+            <ci> mw15387cf6_c952_4ca8_88e2_4d0e5208ac5b </ci>
+            <ci> mwe7177d4b_4638_4776_8768_2fc701639ea4 </ci>
+          </apply>
+        </apply>
+      </math>
+      <listOfParameters>
+        <parameter id="mw0a49291e_6d2f_4d45_9149_91fd1584d740" name="v1" value="209.34" constant="true"/>
+        <parameter id="mw15387cf6_c952_4ca8_88e2_4d0e5208ac5b" name="k1" value="5.6" constant="true"/>
+      </listOfParameters>
+    </kineticLaw>
+  </reaction>
+  <reaction id="mw3834c399_3d5b_45b6_b448_a041a454cea7" name="transcription 7" reversible="false" fast="false">
+    <notes>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+        <annotation>P. Thomas, Y. Pang, E. J. Filardo and J. Dong. Identity of an Estrogen Membrane Receptor Coupled to a G Protein in Human Breast Cancer Cells. Endocrinology 146 (2): 624; Yefei Pang, Jing Dong, and Peter Thomas. Estrogen Signaling Characteristics of Atlantic Croaker G Protein-Coupled Receptor 30 (GPR30) and Evidence It Is Involved in Maintenance of Oocyte Meiotic Arrest. Endocrinology. 2008 July; 149(7): 3410–3426.         </annotation>
+      </body>
+    </notes>
+    <listOfReactants>
+      <speciesReference species="mw3ac99fbe_050b_4c20_a6e3_c9268a76f0ff" stoichiometry="1"/>
+      <speciesReference species="mw51a01a93_7a83_4011_a195_19cc4f4273b4" stoichiometry="1"/>
+    </listOfReactants>
+    <listOfProducts>
+      <speciesReference species="mwc214d735_e319_4780_9d9e_3774737ef55b" stoichiometry="1"/>
+    </listOfProducts>
+    <kineticLaw>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <apply>
+          <times/>
+          <ci> mw169b9666_45cb_4087_81d8_09711c796416 </ci>
+          <ci> mw3ac99fbe_050b_4c20_a6e3_c9268a76f0ff </ci>
+          <ci> mw51a01a93_7a83_4011_a195_19cc4f4273b4 </ci>
+        </apply>
+      </math>
+      <listOfParameters>
+        <parameter id="mw169b9666_45cb_4087_81d8_09711c796416" name="jh" value="1" constant="true"/>
+      </listOfParameters>
+    </kineticLaw>
+  </reaction>
+  <reaction id="mw1dde728a_fe99_4c5e_b338_d43757d2e552" name="SOD activity" reversible="false" fast="false">
+    <notes>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+        <annotation>P. Thomas, Y. Pang, E. J. Filardo and J. Dong. Identity of an Estrogen Membrane Receptor Coupled to a G Protein in Human Breast Cancer Cells. Endocrinology 146 (2): 624; Yefei Pang, Jing Dong, and Peter Thomas. Estrogen Signaling Characteristics of Atlantic Croaker G Protein-Coupled Receptor 30 (GPR30) and Evidence It Is Involved in Maintenance of Oocyte Meiotic Arrest. Endocrinology. 2008 July; 149(7): 3410–3426.         </annotation>
+      </body>
+    </notes>
+    <listOfReactants>
+      <speciesReference species="mwe7177d4b_4638_4776_8768_2fc701639ea4" stoichiometry="1"/>
+      <speciesReference species="mw923ea8e2_e408_4fdd_8a4a_a6c4b95fd60c" stoichiometry="1"/>
+    </listOfReactants>
+    <listOfProducts>
+      <speciesReference species="mw95c3f5f5_f90a_477f_9a72_ad59ce58cea8" stoichiometry="1"/>
+    </listOfProducts>
+    <kineticLaw>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <apply>
+          <divide/>
+          <apply>
+            <times/>
+            <ci> mwec9de586_3b56_412e_8a98_ad1cb17bb2ca </ci>
+            <ci> mwe7177d4b_4638_4776_8768_2fc701639ea4 </ci>
+          </apply>
+          <apply>
+            <plus/>
+            <ci> mw8467d984_66c3_4769_aff9_f319dd61e918 </ci>
+            <ci> mwe7177d4b_4638_4776_8768_2fc701639ea4 </ci>
+          </apply>
+        </apply>
+      </math>
+      <listOfParameters>
+        <parameter id="mwec9de586_3b56_412e_8a98_ad1cb17bb2ca" name="v2" value="120" constant="true"/>
+        <parameter id="mw8467d984_66c3_4769_aff9_f319dd61e918" name="k2" value="1.5" constant="true"/>
+      </listOfParameters>
+    </kineticLaw>
+  </reaction>
+  <reaction id="mw74135da5_8502_434b_81ef_185b13db04f3" name="PON formation" reversible="false" fast="false">
+    <notes>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+        <annotation>P. Thomas, Y. Pang, E. J. Filardo and J. Dong. Identity of an Estrogen Membrane Receptor Coupled to a G Protein in Human Breast Cancer Cells. Endocrinology 146 (2): 624; Yefei Pang, Jing Dong, and Peter Thomas. Estrogen Signaling Characteristics of Atlantic Croaker G Protein-Coupled Receptor 30 (GPR30) and Evidence It Is Involved in Maintenance of Oocyte Meiotic Arrest. Endocrinology. 2008 July; 149(7): 3410–3426.         </annotation>
+      </body>
+    </notes>
+    <listOfReactants>
+      <speciesReference species="mwe7177d4b_4638_4776_8768_2fc701639ea4" stoichiometry="1"/>
+      <speciesReference species="mw056d07d0_1160_41b1_95e7_fdd22f8dd76e" stoichiometry="1"/>
+    </listOfReactants>
+    <listOfProducts>
+      <speciesReference species="mw71275f0c_2fb6_4a33_b228_d0099722c528" stoichiometry="1"/>
+    </listOfProducts>
+    <kineticLaw>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <apply>
+          <times/>
+          <ci> mw4cd07f5e_748f_4097_beb7_ab34f1304075 </ci>
+          <ci> mwe7177d4b_4638_4776_8768_2fc701639ea4 </ci>
+          <ci> mw056d07d0_1160_41b1_95e7_fdd22f8dd76e </ci>
+        </apply>
+      </math>
+      <listOfParameters>
+        <parameter id="mw4cd07f5e_748f_4097_beb7_ab34f1304075" name="gf" value="1" constant="true"/>
+      </listOfParameters>
+    </kineticLaw>
+  </reaction>
+  <reaction id="mw1b456b49_88b1_46dc_b1b6_1cfc37f0ec99" name="CAT transcription" reversible="false" fast="false">
+    <listOfReactants>
+      <speciesReference species="mw2388c071_671a_448f_880d_3be359766ae7" stoichiometry="1"/>
+    </listOfReactants>
+    <listOfProducts>
+      <speciesReference species="mwd3e2c231_dec0_43b9_a836_c95f9e470140" stoichiometry="1"/>
+    </listOfProducts>
+    <kineticLaw>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <apply>
+          <times/>
+          <ci> mwb812d20c_a80f_492b_9e81_21a63fe76a0c </ci>
+          <ci> mw2388c071_671a_448f_880d_3be359766ae7 </ci>
+        </apply>
+      </math>
+      <listOfParameters>
+        <parameter id="mwb812d20c_a80f_492b_9e81_21a63fe76a0c" name="kj" value="1" constant="true"/>
+      </listOfParameters>
+    </kineticLaw>
+  </reaction>
+  <reaction id="mwd04bb2e0_88a9_4dbb_a753_cd6be8168914" name="SOD transcripn" reversible="false" fast="false">
+    <listOfReactants>
+      <speciesReference species="mwc214d735_e319_4780_9d9e_3774737ef55b" stoichiometry="1"/>
+    </listOfReactants>
+    <listOfProducts>
+      <speciesReference species="mw923ea8e2_e408_4fdd_8a4a_a6c4b95fd60c" stoichiometry="1"/>
+    </listOfProducts>
+    <kineticLaw>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <apply>
+          <times/>
+          <ci> mw48116c7f_4533_4d46_a0bf_6d1cb47f0d53 </ci>
+          <ci> mwc214d735_e319_4780_9d9e_3774737ef55b </ci>
+        </apply>
+      </math>
+      <listOfParameters>
+        <parameter id="mw48116c7f_4533_4d46_a0bf_6d1cb47f0d53" name="kj" value="1" constant="true"/>
+      </listOfParameters>
+    </kineticLaw>
+  </reaction>
+</listOfReactions>
+</model>
+</sbml>
